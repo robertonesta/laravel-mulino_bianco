@@ -1,0 +1,31 @@
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    background-image: url('https://www.invacanzaallargentario.it/vet/wp-content/uploads/Mulino-bianco-barilla-toscana.jpg');
+    background-size: cover;
+}
+#jumbotron{
+    height: 650px;
+}
+header{
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+main .container{
+    padding-top: 7rem;
+}
+.admin{
+    background-color: rgba(0, 0, 0, 0.462);
+}
+
+footer{
+    background-color: transparent;
+    span{
+        strong{
+            color: rgba(0, 0, 0, 0.901);
+        }
+    };
+}

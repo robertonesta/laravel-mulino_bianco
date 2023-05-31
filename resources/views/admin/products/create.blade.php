@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-3">
+<div class="container">
     <form action="{{route('admin.products.store')}}" method="post">
         @csrf
         <div class="mb-3">

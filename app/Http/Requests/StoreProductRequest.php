@@ -38,9 +38,10 @@ class StoreProductRequest extends FormRequest
             'title.required' => 'Ricorda di inserire un titolo per questo prodotto!',
             'title.min' => 'Il titolo deve contenere minimo 5 caratteri.',
             'title.max' => 'Il titolo deve contenere massimo 100 caratteri.',
+            'img.required' => 'Ricorda di inserire un\'immagine per questo prodotto!',
             'img.max' => 'La lunghezza di caratteri dell\'immagine deve essere massimo di 355 caratteri',
-            'price.required' => 'Ricordati inserire un prezzo per questo prodotto!',
-            'description.required' => 'Ricordati inserire un prezzo per questo prodotto!',
+            'price.required' => 'Ricorda di inserire un prezzo per questo prodotto!',
+            'description.required' => 'Ricorda di inserire una descrizione per questo prodotto!',
             'description.max' => 'La lunghezza di caratteri della descrizione non può superarare 3000 caratteri',
         ];
     }

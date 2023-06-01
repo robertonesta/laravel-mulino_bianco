@@ -7,7 +7,7 @@
         <a type="button" class="btn btn-warning my-3 border-0 text-white" href="{{route('admin.products.create')}}">AGGIUNGI</a>
     </div>
     @if (Session::has('message'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="text-center alert alert-success alert-dismissible fade show" role="alert">
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       <strong>{{Session('message')}}</strong>
     </div>    

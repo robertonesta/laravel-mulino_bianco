@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Admin Section</h1>
     <div class="text-center">
-        <a type="button" class="btn btn-warning my-3 border-0 text-white" href="{{route('admin.products.create')}}">AGGIUNGI</a>
+        <a type="button" class="btn btn-success my-3 border-0 text-white" href="{{route('admin.products.create')}}">AGGIUNGI</a>
     </div>
     @if (Session::has('message'))
     <div class="text-center alert alert-success alert-dismissible fade show" role="alert">
@@ -66,8 +66,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-
                     </td>
                 </tr>
                 @endforeach

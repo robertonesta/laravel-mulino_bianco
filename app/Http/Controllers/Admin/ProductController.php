@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 
 
 class ProductController extends Controller
@@ -36,8 +38,10 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
+        $val_data = $request ->validated();
+        
         $data = [
             'title' => $request ->title,
             'img' => $request ->img,
@@ -45,7 +49,7 @@ class ProductController extends Controller
             'price' => $request ->price,
             'availability' => $request ->availability,
         ];
-        Product::create($data);
+        Product::create($val_data);
         return to_route('admin.products.index')->with('message', 'A new file has been added successfully');
     }
 
@@ -79,8 +83,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
+        $val_data = $request ->validated();
+
         $data = [
             'title' => $request ->title,
             'img' => $request ->img,
@@ -88,7 +94,7 @@ class ProductController extends Controller
             'price' => $request ->price,
             'availability' => $request ->availability,
         ];
-        $product->update($data);
+        $product->update($val_data);
         return to_route('admin.products.index')->with('message', 'A new file has been edited successfully');
     }
 

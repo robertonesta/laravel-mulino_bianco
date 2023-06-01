@@ -26,6 +26,7 @@ class StoreProductRequest extends FormRequest
         return [
             'title' => 'required|min:5|max:100',
             'img' => 'nullable|max:355',
+            'hoverImg' => 'nullable|max:355',
             'price' => 'required',
             'description' => 'required|max:3000',
         ];
@@ -40,6 +41,8 @@ class StoreProductRequest extends FormRequest
             'title.max' => 'Il titolo deve contenere massimo 100 caratteri.',
             'img.required' => 'Ricorda di inserire un\'immagine per questo prodotto!',
             'img.max' => 'La lunghezza di caratteri dell\'immagine deve essere massimo di 355 caratteri',
+            'hoverImg.required' => 'Ricorda di inserire una seconda immagine che si alternerà con la prima quando il mouse ci passerà su!',
+            'hoverImg.max' => 'La lunghezza di caratteri della seconda immagine deve essere massimo di 355 caratteri',
             'price.required' => 'Ricorda di inserire un prezzo per questo prodotto!',
             'description.required' => 'Ricorda di inserire una descrizione per questo prodotto!',
             'description.max' => 'La lunghezza di caratteri della descrizione non può superarare 3000 caratteri',

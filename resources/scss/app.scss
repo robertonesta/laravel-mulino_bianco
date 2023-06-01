@@ -24,6 +24,13 @@ main .container{
 .description-size{
     width: 42%;
 }
+
+#image_switch:hover .image {
+    display: none !important;
+}
+#image_switch:hover .hoverImg {
+    display: block !important;
+}
 .btn-danger{
     background-color: #D22630;
 }

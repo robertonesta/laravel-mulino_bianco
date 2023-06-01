@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->text('img');
+            $table->text('hoverImg');
             $table->text('description');
             $table->decimal('price', 4, 2)->nullable();
             $table->boolean('availability')->default(true);

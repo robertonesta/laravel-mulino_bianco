@@ -15,6 +15,10 @@
           <input type="text" value="{{old('img')}}" name="img" id="img" class="form-control" placeholder="Add a new image path" aria-describedby="helpId">
         </div>
         <div class="mb-3">
+          <label for="hoverImg" class="form-label fw-bold">IMMAGINE 2</label>
+          <input type="text" value="{{old('hoverImg')}}" name="hoverImg" id="hoverImg" class="form-control" placeholder="Add a switchable image when the mouse is on" aria-describedby="helpId">
+        </div>
+        <div class="mb-3">
           <label for="description" class="form-label fw-bold">DESCRIZIONE</label>
           <textarea name="description" id="description" class="w-100 form-control" rows="5" placeholder="Add a new description"></textarea>
         </div>

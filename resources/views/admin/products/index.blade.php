@@ -30,7 +30,7 @@
                 @foreach ($products as $product)
                 <tr>
                     <td scope="row">{{$product->id}}</td>
-                    <td scope="row">{{$product->title}}</td>
+                    <td scope="row" class="text-uppercase">{{$product->title}}</td>
                     <td scope="row">
                         <img width="100" src="{{$product->img}}" alt="{{$product->title}}">
                     </td>

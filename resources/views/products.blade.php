@@ -9,7 +9,7 @@
         <div class="col">
             <div class="card h-100 shadow">
                 <div class="card-header">
-                <h3 class="text-center">{{$product->title}}</h3>
+                <h3 class="text-center text-uppercase">{{$product->title}}</h3>
                 <img class="card-img-top" src="{{$product->img}}" alt="">
                 </div>
                 <div class="card-body">                    

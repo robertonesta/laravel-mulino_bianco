@@ -14,7 +14,7 @@
         </div>
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
-          <textarea name="description" id="description" class="w-100 form-control" rows="1" placeholder="Add a new description"></textarea>
+          <textarea name="description" id="description" class="w-100 form-control" rows="5" placeholder="Add a new description"></textarea>
         </div>
         <div class="mb-3">
           <label for="price" class="form-label">Price</label>

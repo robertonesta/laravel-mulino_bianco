@@ -12,7 +12,7 @@
                 <h3 class="text-uppercase">{{$product->title}}</h3>
             </div>
             <div class="card-body text-center">                    
-                    <img class="card-img-top w-75 my-3" src="{{$product->img}}" alt="">
+                    <img class="card-img-top my-3" src="{{$product->img}}" alt="">
                     <p>{{$product->description}}</p>
                 </div>
                 <div class="card footer text-center fw-bold">

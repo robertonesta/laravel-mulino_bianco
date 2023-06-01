@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-body">                    
                     <p>{{$product->description}}</p>
-                    <p >{{$product->availability ? 'in stock' : 'out of stock'}}</p>
+                    <p>{{$product->availability ? 'DISPONIBILI' : 'NON DISPONIBILI'}}</p>
                 </div>
             </div>
         </div>

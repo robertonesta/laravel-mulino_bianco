@@ -7,13 +7,13 @@
             <div class="collapse navbar-collapse " id="collapsibleNavId">
                 <ul class="navbar-nav mt-2 mt-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{route('home')}}" aria-current="page">Home<span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link text-dark" href="{{route('home')}}" aria-current="page">HOME<span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('products')}}">Products</a>
+                        <a class="nav-link text-dark" href="{{route('products')}}">PRODOTTI</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-secondary admin" href="{{route('admin.products.index')}}">Admin</a>
+                        <a class="nav-link btn btn-secondary text-white admin" href="{{route('admin.products.index')}}">ADMIN</a>
                     </li>
                 </ul>
             </div>

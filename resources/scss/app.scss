@@ -22,9 +22,14 @@ main .container{
     background-color: rgba(0, 0, 0, 0.462);
 }
 .description-size{
-    width: 45%;
+    width: 42%;
 }
-
+.btn-danger{
+    background-color: #D22630;
+}
+.btn-warning, .btn-primary{
+    background-color: #007DBA;
+}
 footer{
     background-color: transparent;
     span{

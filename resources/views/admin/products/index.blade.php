@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Admin Section</h1>
     <div class="text-center">
-        <a type="button" class="btn btn-warning my-3" href="{{route('admin.products.create')}}">Add a New Product</a>
+        <a type="button" class="btn btn-warning my-3 border-0 text-white" href="{{route('admin.products.create')}}">AGGIUNGI</a>
     </div>
     @if (Session::has('message'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -18,12 +18,12 @@
             <thead class="text-center">
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Image</th>
-                    <th class="description-size" scope="col">Description</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Availability</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">TITOLO</th>
+                    <th scope="col">IMMAGINE</th>
+                    <th class="description-size" scope="col">DESCRIZIONE</th>
+                    <th scope="col">PREZZO</th>
+                    <th scope="col">DISPONIBILITÀ</th>
+                    <th scope="col">AZIONI</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +36,7 @@
                     </td>
                     <td scope="row">{{$product->description}}</td>
                     <td scope="row">€{{$product->price}}</td>
-                    <td class="text-uppercase text-center" scope="row">{{$product->availability ? 'in stock': 'out of stock'}}</td>
+                    <td class="text-uppercase text-center" scope="row">{{$product->availability ? 'disponibili': 'non disponibili'}}</td>
                     <td scope="row">
                         <a class="btn btn-primary" type="button" href="{{route('admin.products.show', $product->id)}}"><i class="fa-solid fa-magnifying-glass fa-fw"></i></a>
                         <a class="btn btn-secondary" type="button" href="{{route('admin.products.edit', $product->id)}}"><i class="fa-solid fa-pencil fa-fw"></i></a>
@@ -49,18 +49,18 @@
                                 <div class="modal-content">
                                     <div class="modal-header d-flex flex-column">
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                                        <h5 class="modal-title" id="modalTitle-{{$product->id}}">Delete {{$product->title}}</h5>
-                                        <img width="100" src="{{$product->thumb}}" alt="">
+                                        <h5 class="modal-title" id="modalTitle-{{$product->id}}">ELIMINA <SPAN class="text-uppercase">{{$product->title}}</SPAN></h5>
+                                        <img class="shadow my-2" width="100" src="{{$product->img}}" alt="">
                                     </div>
                                     <div class="modal-body">
-                                        Are you sure you want delete this element? This is a no-return action.
+                                        Sei sicuro di voler eliminare questo prodotto? L'azione sarà irreversibile.
                                     </div>
                                     <div class="modal-footer d-flex justify-content-center align-items-center gap-2">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ANNULLA</button>
                                         <form action="{{route('admin.products.destroy', $product->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Confirm</button>
+                                            <button type="submit" class="btn btn-danger">CONFERMA</button>
                                         </form>
                                     </div>
                                 </div>

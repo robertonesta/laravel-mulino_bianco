@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Admin Section</h1>
+    <h1>ADMIN SECTION</h1>
     <div class="text-center">
         <a type="button" class="btn btn-success my-3 border-0 text-white" href="{{route('admin.products.create')}}">AGGIUNGI</a>
     </div>

@@ -8,13 +8,15 @@
         @foreach ($products as $product)
         <div class="col">
             <div class="card h-100 shadow">
-                <div class="card-header">
-                <h3 class="text-center text-uppercase">{{$product->title}}</h3>
-                <img class="card-img-top" src="{{$product->img}}" alt="">
-                </div>
-                <div class="card-body">                    
+                <div class="card-header text-center">
+                <h3 class="text-uppercase">{{$product->title}}</h3>
+            </div>
+            <div class="card-body text-center">                    
+                    <img class="card-img-top w-75 my-3" src="{{$product->img}}" alt="">
                     <p>{{$product->description}}</p>
-                    <p>{{$product->availability ? 'DISPONIBILI' : 'NON DISPONIBILI'}}</p>
+                </div>
+                <div class="card footer text-center fw-bold">
+                <p>{{$product->availability ? 'DISPONIBILI' : 'NON DISPONIBILI'}}</p>
                 </div>
             </div>
         </div>

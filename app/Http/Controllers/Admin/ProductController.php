@@ -41,16 +41,10 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         $val_data = $request ->validated();
+
         
-        $data = [
-            'title' => $request ->title,
-            'img' => $request ->img,
-            'description' => $request ->description,
-            'price' => $request ->price,
-            'availability' => $request ->availability,
-        ];
         Product::create($val_data);
-        return to_route('admin.products.index')->with('message', 'A new file has been added successfully');
+        return to_route('admin.products.index')->with('message', 'Un nuovo file è stato aggiunto con successo');
     }
 
     /**
@@ -87,15 +81,9 @@ class ProductController extends Controller
     {
         $val_data = $request ->validated();
 
-        $data = [
-            'title' => $request ->title,
-            'img' => $request ->img,
-            'description' => $request ->description,
-            'price' => $request ->price,
-            'availability' => $request ->availability,
-        ];
+        
         $product->update($val_data);
-        return to_route('admin.products.index')->with('message', 'A new file has been edited successfully');
+        return to_route('admin.products.index')->with('message', 'Il file è stato aggiornato con successo');
     }
 
     /**
@@ -107,6 +95,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-        return to_route('admin.products.index')->with('message', 'The file has been deleted successfully');
+        return to_route('admin.products.index')->with('message', 'Il file è stato eliminato con successo');
     }
 }

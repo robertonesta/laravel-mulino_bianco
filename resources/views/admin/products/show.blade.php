@@ -7,7 +7,10 @@
             <h3 class="text-center text-uppercase">{{$product->title}}</h3>
         </div>
         <div class="card-body text-center">
-            <img width="400" src="{{$product->img}}" alt="">
+            <div id="image_switch" class="text-center">
+                <img class="image w-50 card-img-top my-3 d-block" src="{{$product->img}}" alt="">
+                <img class="hoverImg w-50 card-img-top my-3 d-none" src="{{$product->hoverImg}}" alt="">
+            </div>
         </div>
         <div class="card-footer py-3 text-center">
             <p class="fs-5">{{$product->description}}</p>

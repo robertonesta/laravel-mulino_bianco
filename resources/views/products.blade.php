@@ -16,7 +16,7 @@
                     <p>{{$product->description}}</p>
                 </div>
                 <div class="card footer text-center fw-bold">
-                <p>{{$product->availability ? 'DISPONIBILI' : 'NON DISPONIBILI'}}</p>
+                <p class="mt-3">{{$product->availability ? 'DISPONIBILI' : 'NON DISPONIBILI'}}</p>
                 </div>
             </div>
         </div>

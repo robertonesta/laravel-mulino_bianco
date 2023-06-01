@@ -20,6 +20,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">TITOLO</th>
                     <th scope="col">IMMAGINE</th>
+                    <th scope="col">IMMAGINE 2</th>
                     <th class="description-size" scope="col">DESCRIZIONE</th>
                     <th scope="col">PREZZO</th>
                     <th scope="col">DISPONIBILITÀ</th>
@@ -33,6 +34,9 @@
                     <td scope="row" class="text-uppercase">{{$product->title}}</td>
                     <td scope="row">
                         <img width="100" src="{{$product->img}}" alt="{{$product->title}}">
+                    </td>
+                    <td scope="row">
+                        <img width="100" src="{{$product->hoverImg}}" alt="{{$product->title}}">
                     </td>
                     <td scope="row">{{$product->description}}</td>
                     <td scope="row">€{{$product->price}}</td>
